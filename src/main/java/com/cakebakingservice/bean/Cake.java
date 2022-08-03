@@ -6,11 +6,11 @@ import javax.validation.constraints.Pattern;
 
 public class Cake {
 	@NotNull(message = "Must select one option")
-	private int selectedcake;
+	private Integer selectedcake;
 	private String flavor;
-	private int flavorRate;
-	private int includeCandles;
-	private int includeIncreption;
+	private Integer flavorRate;
+	private Integer includeCandles;
+	private Integer includeIncreption;
 	private String theIncreption;
 	@NotEmpty(message = "Name is required")
 	private String name;
@@ -21,19 +21,11 @@ public class Cake {
 	private String phoneNumber;
 	private double price;
 
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	public int getSelectedcake() {
+	public Integer getSelectedcake() {
 		return selectedcake;
 	}
 
-	public void setSelectedcake(int selectedcake) {
+	public void setSelectedcake(Integer selectedcake) {
 		this.selectedcake = selectedcake;
 	}
 
@@ -45,27 +37,27 @@ public class Cake {
 		this.flavor = flavor;
 	}
 
-	public int getFlavorRate() {
+	public Integer getFlavorRate() {
 		return flavorRate;
 	}
 
-	public void setFlavorRate(int flavorRate) {
+	public void setFlavorRate(Integer flavorRate) {
 		this.flavorRate = flavorRate;
 	}
 
-	public int getIncludeCandles() {
+	public Integer getIncludeCandles() {
 		return includeCandles;
 	}
 
-	public void setIncludeCandles(int includeCandles) {
+	public void setIncludeCandles(Integer includeCandles) {
 		this.includeCandles = includeCandles;
 	}
 
-	public int getIncludeIncreption() {
+	public Integer getIncludeIncreption() {
 		return includeIncreption;
 	}
 
-	public void setIncludeIncreption(int includeIncreption) {
+	public void setIncludeIncreption(Integer includeIncreption) {
 		this.includeIncreption = includeIncreption;
 	}
 
@@ -81,12 +73,16 @@ public class Cake {
 		return name;
 	}
 
-	public Cake() {
-		// TODO Auto-generated constructor stub
-	}
-
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
 	}
 
 	public String getPhoneNumber() {

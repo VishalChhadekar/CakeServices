@@ -25,7 +25,7 @@ public class CakeController {
 	public String home() {
 		return "home";
 	}
-	
+
 	@RequestMapping(value = "/showCakeOrderForm", method = RequestMethod.GET)
 	public String showCakeOrder(@ModelAttribute("cake") Cake cake) {
 		return "placeOrder";
@@ -41,15 +41,15 @@ public class CakeController {
 		// get select flavor by user, and get it's value from list
 		int flavorRate = cakeServiceClass.flavorList.get(cake.getFlavor()); // this get method takes the key and returns
 																			// value, if not present returns null
-		
+
 		// set the chosen flavor price to attribute of Cake class
 		cake.setFlavorRate(flavorRate);
 
-//		if (cake.getIncludeCandles() == null)
-//			cake.setIncludeCandles(0); // To prevent NullPointerException
-//
-//		if (cake.getIncludeinscription()==null)
-//			cake.setIncludeIncreption(0); // To prevent NullPointerException
+		if (cake.getIncludeCandles() == null)
+			cake.setIncludeCandles(0); // To prevent NullPointerException
+
+		if (cake.getIncludeIncreption() == null)
+			cake.setIncludeIncreption(0); // To prevent NullPointerException
 
 		// Calculating Cake price
 		double price = cake.getSelectedcake() + flavorRate + cake.getIncludeCandles() + cake.getIncludeIncreption();
